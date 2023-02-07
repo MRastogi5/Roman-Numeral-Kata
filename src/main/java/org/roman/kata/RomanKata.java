@@ -12,6 +12,7 @@ public class RomanKata {
         map.put(10, "X");
         map.put(50, "L");
         map.put(100, "C");
+        map.put(500,"D")
         map.put(1000, "M");
 
         return map.get(integerValue);
