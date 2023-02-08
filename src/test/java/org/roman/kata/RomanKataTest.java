@@ -1,7 +1,9 @@
 package org.roman.kata;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RomanKataTest {
 
@@ -40,4 +42,29 @@ public class RomanKataTest {
         RomanKata romanKata = new RomanKata();
         assertEquals("MMD", romanKata.convertToRoman(2500));
     }
+
+    @Test
+    public void checkRomanValueOfNegativeNumber(){
+        RomanKata romanKata = new RomanKata();
+
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            romanKata.convertToRoman(-2500);
+        });
+    }
+    @Test
+    public void checkRomanValueOfZero(){
+        RomanKata romanKata = new RomanKata();
+
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            romanKata.convertToRoman(0);
+        });
+    }
+
+    @Test
+    public void checkRomanValueOf2764(){
+        RomanKata romanKata = new RomanKata();
+
+        assertEquals("MMDCCLXIV", romanKata.convertToRoman(2764));
+    }
+
 }
