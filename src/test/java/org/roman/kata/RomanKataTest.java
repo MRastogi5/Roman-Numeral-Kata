@@ -2,6 +2,9 @@ package org.roman.kata;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -65,6 +68,7 @@ public class RomanKataTest {
         RomanKata romanKata = new RomanKata();
 
         assertEquals("MMDCCLXIV", romanKata.convertToRoman(2764));
+        assertEquals("MMDCCLXIX", romanKata.convertToRoman(2769));
     }
 
 }

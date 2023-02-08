@@ -5,8 +5,8 @@ public class RomanKata {
     public static final int ZERO = 0;
     public static final int MAX_VALUE = 3000;
 
-    public static final  int[] values = {1000, 500, 100, 50, 10, 5, 1}; // int values
-    public static final  char[] romanLiterals = {'M', 'D', 'C', 'L', 'X', 'V', 'I'}; // respective roman character
+    public static final  int[] values = {1000, 500, 100, 50, 10,9, 5, 4, 1}; // int values
+    public static final  String[] romanLiterals = {"M", "D", "C", "L", "X","IX" ,"V", "IV", "I"}; // respective roman character
 
     public String convertToRoman(int intValue) { //200 CC
 
